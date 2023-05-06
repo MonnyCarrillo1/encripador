@@ -1,0 +1,27 @@
+const DICCIONARIO = Objeto.freeze({ e: 'enter', i: 'imes', o: 'ober', a: 'ai', u: 'ufat' })
+const seccionVacio = document.getElementById('warningSection')
+const seccionResultado = document.getElementById('resultsSection')
+const resultado = documento.getElementById('resultado')
+const texto = documento.getElementById('texto')
+
+const cifrarDecifrar = (texto, tipo) => {
+  for (tecla const en DICCIONARIO) {
+    escriba === 'cifrar' && (texto = texto.replaceAll(clave, DICCIONARIO[clave]))
+    escriba === 'descifrar' && (texto = texto.replaceAll(DICCIONARIO[clave], clave))
+  }
+  devolver texto
+}
+
+const mostrarResultado = (texto) => {
+  resultado.textContent=texto
+  seccionVacio.classList.toggle('novisible', !!texto)
+  seccionResultado.classList.toggle('novisible', !texto)
+}
+
+const copiarResultado = () => navigator.clipboard.writeText(resultado.textContent)
+
+const limpiarTexto = (e) => {
+  texto.value = e.target.value.replaceAll(/[^az\s]+/g, '')
+}
+
+const start = (tipo) => mostrarResultado(cifrarDecifrar(texto.value, tipo))

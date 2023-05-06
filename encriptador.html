@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+  <header class="header">
+    <img src="./Logo.png">
+  </header>
+  <main class="main">
+
+
+    <section class="container">
+      <textarea class="text-area" placeholder="Ingrese su texto aqui" id="texto"></textarea>
+
+      <div class="block1__aviso">
+        <img src="./bi_shield-fill-exclamation.png">
+        <p style="color: #7328c9;">Solo letras minusculas y sin acentos</p>
+      </div>
+
+      <div class="container-buttons">
+        <button class="button b2" id="decryptButton">Desencriptar</button>
+        <button class="button b1" id="encryptButton" onclick="encryptButton()">Encriptar</button>
+      </div>
+    </section>
+
+
+    <section class="main__block2">
+      <div class="container-textarea">
+
+        <div class="warning" id="warningSection">
+          <img src="./Muñeco.png" alt="">
+          <p>Ningun mensaje fue encontrado</p>
+          <textarea style="color: #7328c9;" class="text-area2"
+            id="resultado">Ingresa un texto para encriptar o desencriptar</textarea>
+          <button class="button button--copy" id="copyButton">
+            <p class="primario">Copiar</p>
+            <p class="alternativo">Texto copiado</p>
+          </button>
+
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
